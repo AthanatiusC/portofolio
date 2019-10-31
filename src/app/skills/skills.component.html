@@ -1,0 +1,51 @@
+<section id="PrimarySkills" class="section feature feature-center bg-white">
+        <div class="container">
+          <div class="row">
+              <div class="col-12 col-md-12 col-lg-6 offset-lg-3">
+                  <div class="heading heading-1 text--center mb-80">
+                      <h2 class="heading-title">
+                          Primary Skills
+                      </h2>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div *ngFor="let skill of Skills" class="col-md-6">
+                  <div class="feature-panel mb-10">
+                      <div class="feature-content">
+                          <h3>
+                            <div class="row">
+                                <div class="col-md-6" style="text-align: right">
+                                        <span>{{skill.name}} </span> 
+                                </div>
+                            <div class="col-md-6" style="text-align: left">
+                                <span class="badge badge-success" *ngIf="skill.value>80">Intermediate</span>
+                                <span class="badge badge-info" *ngIf="skill.value<=80">Fluent</span>
+                            </div>
+                            </div>
+                          </h3>
+                          <div class="progress" style="height: 20px;">
+                              <div [ngClass]="{'progress-bar': true,'bg-success':skill.value >80,'bg-info':skill.value<=80}" role="progressbar" [style.width.%]="skill.value" aria-valuemin="0"><span style="font-size: 15px;color:#e9ecef;font-weight: bold;">{{skill.value}}%</span></div>
+                          </div>
+                          <p>{{skill.description}}</p>
+                      </div>
+                  </div>
+              </div>
+              <!-- <div class="col-md-6">
+                  <div *ngFor="let skill of Skills2" class="feature-panel mb-10">
+                      <div class="feature-content">
+                          <h3>
+                            <span>{{skill.name}} </span> 
+                            <span class="badge badge-success" *ngIf="skill.value>80">Intermediate</span>
+                            <span class="badge badge-info" *ngIf="skill.value<=80">Fluent</span>
+                          </h3>
+                          <div class="progress" style="height: 20px;">
+                              <div [ngClass]="{'progress-bar': true,'bg-success':skill.value >80,'bg-info':skill.value<=80}" role="progressbar" [style.width.%]="skill.value" aria-valuemin="0"><span style="font-size: 15px;color:#e9ecef;font-weight: bold;">{{skill.value}}%</span></div>
+                          </div>
+                          <p>{{skill.description}}</p>
+                      </div>
+                  </div>
+              </div> -->
+          </div>
+        </div>
+    </section>

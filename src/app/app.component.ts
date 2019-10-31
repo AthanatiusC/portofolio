@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Portofolio';
+
+  SecondarySkills = [
+    {
+      name: 'Adobe Illustrator & Adobe Photoshop',
+      value: '85',
+      description:'Flexibility in tools and able to utilize them effectively'
+    }
+  ]
 }

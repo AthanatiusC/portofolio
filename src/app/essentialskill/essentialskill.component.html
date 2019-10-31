@@ -1,0 +1,28 @@
+<section id="EssentialSkills" class="section feature feature-center bg-white">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 col-md-12 col-lg-6 offset-lg-3">
+              <div class="heading heading-1 text--center mb-80">
+                  <h2 class="heading-title">
+                      Essential Skills
+                  </h2>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col col-md-4 col-lg-4 mb-10" *ngFor="let skill of Skills">
+              <div class="feature-panel">
+                  <div class="feature-content">
+                    <h3>{{skill.name}}</h3>
+                    
+                    <div class="progress">  
+                        <div [ngClass]="{'progress-bar': true,'bg-success':skill.value >80,'bg-info':skill.value<=80}" role="progressbar" [style.width.%]="skill.value" aria-valuemin="0"></div>
+                    </div>
+                    <p>{{skill.description}}</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+    </div>
+</section>

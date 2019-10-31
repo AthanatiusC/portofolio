@@ -1,0 +1,32 @@
+<section id="academic" class="section feature bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 offset-lg-3">
+                <div class="heading heading-1 text--center mb-80">
+                    <h2 class="heading-title">
+                        Latest Academic Records
+                    </h2>
+                    <p>Current Level : Vocational High School</p>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                <th scope="col">Subjects</th>
+                <th scope="col">Minimal Score Required</th>
+                <th scope="col">Theory Score</th>
+                <th scope="col">Applied Subject Score</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let subject of Subjects">
+                <tr>
+                    <th scope="row">{{subject.name}}</th>
+                    <td>{{subject.minscore}}</td>
+                    <td>{{subject.tscore}}</td>
+                    <td>{{subject.pscore}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
